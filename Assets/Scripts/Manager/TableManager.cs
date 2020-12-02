@@ -26,7 +26,6 @@ public class TableManager
 
     void init()
     {
-
     }
 
     private Dictionary<string, List<Dictionary<string, object>>> table = new Dictionary<string, List<Dictionary<string, object>>>();
@@ -35,6 +34,17 @@ public class TableManager
     static string LINE_SPLIT_RE = @"\r\n|\n\r|\n|\r";
     static char[] TRIM_CHARS = { '\"' };
 
+    public List<Dictionary<string, object>> GetTable(string file)
+    {
+        if (table.ContainsKey(file))
+        {
+            return table[file];
+        }
+        else
+        {
+            return Read(file);
+        }
+    }
 
     public List<Dictionary<string, object>> Read(string file)
     {

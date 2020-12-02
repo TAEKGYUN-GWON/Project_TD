@@ -5,8 +5,7 @@ public class EnemyManager : MonoBehaviour
 {
     private static EnemyManager instance = null;
 
-    [SerializeField]
-    private int enemyCount = 100;
+    private int enemyCount = 0;
 
     [SerializeField]
     private EnemyPool pool;
@@ -37,8 +36,15 @@ public class EnemyManager : MonoBehaviour
         }
     }
 
+    List<Dictionary<string, object>> listWaveInfo = new List<Dictionary<string, object>>();
+
     void init()
     {
+
+        listWaveInfo = TableManager.Instance.GetTable("info_enemy_wave");
+
+        enemyCount = listWaveInfo[InGameManager.Instance.gameLevel - 1]["Count"].GetHashCode();
+
         if (pool != null)
             pool.InitEnemyPool(enemyCount);
     }
