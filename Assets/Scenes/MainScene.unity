@@ -3158,6 +3158,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1330801727}
+  - {fileID: 430372617}
+  - {fileID: 2085346480}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3729,6 +3731,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5929468859356067048, guid: eec72bdb2a886ab4bbd8daaaeef4fb84, type: 3}
   m_PrefabInstance: {fileID: 426134181}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &430372616
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 430372617}
+  m_Layer: 0
+  m_Name: GameMaster
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &430372617
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 430372616}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 25.086658, y: -7.12957, z: 7.949716}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 363880819}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &448352092
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10029,7 +10061,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1330801727}
-  - component: {fileID: 1330801728}
   - component: {fileID: 1330801729}
   m_Layer: 0
   m_Name: EnemyManager
@@ -10052,19 +10083,6 @@ Transform:
   m_Father: {fileID: 363880819}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1330801728
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1330801726}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94a1ec66dc74bfd49a495e86905815d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  poolingEnemyPrefab: {fileID: 5054089458323211940, guid: dba4ace3697d1024d879ee8f21c025dd, type: 3}
 --- !u!114 &1330801729
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10077,8 +10095,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dd78871ad931cc45a7203634a4bd9b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyCount: 100
-  pool: {fileID: 1330801728}
+  poolingObjPrefab: {fileID: 5054089458323211940, guid: dba4ace3697d1024d879ee8f21c025dd, type: 3}
+  spawnPoint: {fileID: 978898882}
+  timeBetweenWaves: 5
 --- !u!1001 &1333280241
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15241,6 +15260,50 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5929468859356067048, guid: eec72bdb2a886ab4bbd8daaaeef4fb84, type: 3}
   m_PrefabInstance: {fileID: 2079816135}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2085346479
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2085346480}
+  - component: {fileID: 2085346481}
+  m_Layer: 0
+  m_Name: InGameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2085346480
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2085346479}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 363880819}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2085346481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2085346479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f27733fc2e7fbba4ba09ed73a75222a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameLevel: 1
 --- !u!1001 &2086567448
 PrefabInstance:
   m_ObjectHideFlags: 0

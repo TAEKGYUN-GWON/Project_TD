@@ -1,37 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Transactions;
 using UnityEngine;
 
-public class InGameManager : MonoBehaviour
+public class InGameManager : Singleton<InGameManager>
 {
-    private static InGameManager instance = null;
-
-
-    private void Awake()
+    void Awake()
     {
-        if (instance == null)
-        {
-            instance = this;
-            instance.init();
-            DontDestroyOnLoad(this.gameObject);
-        }
-        else
-        {
-            Destroy(this.gameObject);
-        }
-    }
-
-    public static InGameManager Instance
-    {
-        get
-        {
-            if (instance == null)
-            {
-                return null;
-            }
-
-            return instance;
-        }
+        Instance.init();
     }
 
     public int gameLevel = 1;
