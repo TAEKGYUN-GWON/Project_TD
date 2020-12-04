@@ -29,8 +29,8 @@ public class EnemyManager : Singleton<EnemyManager>
     void Awake()
     {
         init();
-        //waveLoutine = SpawnWaveRootin();
-        //StartCoroutine(waveLoutine);
+        waveLoutine = SpawnWaveRootin();
+        StartCoroutine(waveLoutine);
     }
 
     private void OnEnable()
