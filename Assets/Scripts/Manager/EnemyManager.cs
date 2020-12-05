@@ -21,10 +21,10 @@ public class EnemyManager : Singleton<EnemyManager>
 
     ObjectBasePool enemyPool;
 
+    InGameManager inGameManager;
+
     [SerializeField]
     Enemy enemyPrefab;
-
-    bool isWave = false;
 
     void Awake()
     {
@@ -46,7 +46,8 @@ public class EnemyManager : Singleton<EnemyManager>
 
     void init()
     {
-        isWave = true;
+        inGameManager = InGameManager.Instance;
+        inGameManager.IsWaveActive = true;
 
         listWaveInfo = TableManager.Instance.GetTable("info_enemy_wave");
         listEnemyInfo = TableManager.Instance.GetTable("info_enemy");
@@ -63,7 +64,7 @@ public class EnemyManager : Singleton<EnemyManager>
     {
         while (true)
         {
-            if (!isWave)
+            if (!inGameManager.IsWaveActive)
                 break;
 
             StartCoroutine(SpawnWave());
@@ -93,8 +94,7 @@ public class EnemyManager : Singleton<EnemyManager>
         InGameManager.Instance.gameLevel++;
         if(InGameManager.Instance.gameLevel > listWaveInfo.Count)
         {
-            isWave = false;
-            return;
+            InGameManager.Instance.gameLevel = 0;
         }
         maxEnemyCount = listWaveInfo[InGameManager.Instance.gameLevel - 1]["SpawnMaxCount"].GetHashCode();
         maxSpawnCount = listWaveInfo[InGameManager.Instance.gameLevel - 1]["SpawnCount"].GetHashCode();
