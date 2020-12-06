@@ -252,9 +252,9 @@ namespace OverStory
         {
             Dictionary<int, TValue>.Enumerator enumerator;
 
-            internal Enumerator(Dictionary<int, TValue>.Enumerator enumerator_)
+            internal Enumerator(Dictionary<int, TValue>.Enumerator enumerator)
             {
-                enumerator = enumerator_;
+                this.enumerator = enumerator;
             }
 
             //================================================================================================================================
@@ -323,9 +323,9 @@ namespace OverStory
         {
             Dictionary<int, TValue>.KeyCollection keyCollection;
 
-            internal KeyCollection(Dictionary<int, TValue>.KeyCollection keyCollection_)
+            internal KeyCollection(Dictionary<int, TValue>.KeyCollection keyCollection)
             {
-                keyCollection = keyCollection_;
+                this.keyCollection = keyCollection;
             }
 
             //================================================================================================================================
@@ -415,9 +415,9 @@ namespace OverStory
             {
                 Dictionary<int, TValue>.KeyCollection.Enumerator enumerator;
 
-                internal Enumerator(Dictionary<int, TValue>.KeyCollection.Enumerator enumerator_)
+                internal Enumerator(Dictionary<int, TValue>.KeyCollection.Enumerator enumerator)
                 {
-                    enumerator = enumerator_;
+                    this.enumerator = enumerator;
                 }
 
                 //================================================================================================================================
@@ -460,9 +460,9 @@ namespace OverStory
         {
             Dictionary<int, TValue>.ValueCollection valueCollection;
 
-            internal ValueCollection(Dictionary<int, TValue>.ValueCollection valueCollection_)
+            internal ValueCollection(Dictionary<int, TValue>.ValueCollection valueCollection)
             {
-                valueCollection = valueCollection_;
+                this.valueCollection = valueCollection;
             }
 
             //================================================================================================================================
@@ -552,9 +552,9 @@ namespace OverStory
             {
                 Dictionary<int, TValue>.ValueCollection.Enumerator enumerator;
 
-                internal Enumerator(Dictionary<int, TValue>.ValueCollection.Enumerator enumerator_)
+                internal Enumerator(Dictionary<int, TValue>.ValueCollection.Enumerator enumerator)
                 {
-                    enumerator = enumerator_;
+                    this.enumerator = enumerator;
                 }
 
                 //================================================================================================================================

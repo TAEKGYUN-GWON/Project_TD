@@ -31,29 +31,29 @@ namespace OverStory
     public class CoroutineManager : Singleton<CoroutineManager>
     {
 
-        MicroCoroutine updateMicroCoroutine = new MicroCoroutine();
-        MicroCoroutine fixedUpdateMicroCoroutine = new MicroCoroutine();
-        MicroCoroutine endOfFrameMicroCoroutine = new MicroCoroutine();
+        MicroCoroutine _updateMicroCoroutine = new MicroCoroutine();
+        MicroCoroutine _fixedUpdateMicroCoroutine = new MicroCoroutine();
+        MicroCoroutine _endOfFrameMicroCoroutine = new MicroCoroutine();
 
         public static void StartUpdateCoroutine(IEnumerator routine)
         {
             if (Instance == null)
                 return;
-            Instance.updateMicroCoroutine.AddCoroutine(routine);
+            Instance._updateMicroCoroutine.AddCoroutine(routine);
         }
 
         public static void StartFixedUpdateCoroutine(IEnumerator routine)
         {
             if (Instance == null)
                 return;
-            Instance.fixedUpdateMicroCoroutine.AddCoroutine(routine);
+            Instance._fixedUpdateMicroCoroutine.AddCoroutine(routine);
         }
 
         public static void StartEndOfFrameCoroutine(IEnumerator routine)
         {
             if (Instance == null)
                 return;
-            Instance.endOfFrameMicroCoroutine.AddCoroutine(routine);
+            Instance._endOfFrameMicroCoroutine.AddCoroutine(routine);
         }
 
         void Awake()
@@ -68,7 +68,7 @@ namespace OverStory
             while (true)
             {
                 yield return null;
-                updateMicroCoroutine.Run();
+                _updateMicroCoroutine.Run();
             }
         }
 
@@ -78,7 +78,7 @@ namespace OverStory
             while (true)
             {
                 yield return fu;
-                fixedUpdateMicroCoroutine.Run();
+                _fixedUpdateMicroCoroutine.Run();
             }
         }
 
@@ -88,7 +88,7 @@ namespace OverStory
             while (true)
             {
                 yield return eof;
-                endOfFrameMicroCoroutine.Run();
+                _endOfFrameMicroCoroutine.Run();
             }
         }
     }

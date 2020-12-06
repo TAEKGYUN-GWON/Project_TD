@@ -17,54 +17,46 @@ public class EnemyManager : Singleton<EnemyManager>
 
     public Transform spawnPoint;
 
-    private IEnumerator waveLoutine;
+    private IEnumerator _waveLoutine;
 
-    ObjectBasePool enemyPool;
+    ObjectBasePool _enemyPool;
 
-    InGameManager inGameManager;
+    InGameManager _inGameManager;
 
     [SerializeField]
     Enemy enemyPrefab;
 
     void Awake()
     {
-        init();
-        waveLoutine = SpawnWaveRootin();
-        StartCoroutine(waveLoutine);
+        Init();
+        _waveLoutine = SpawnWaveRootin();
+        StartCoroutine(_waveLoutine);
     }
 
-    private void OnEnable()
+    List<Dictionary<string, object>> _listWaveInfo = new List<Dictionary<string, object>>();
+    List<Dictionary<string, object>> _listEnemyInfo = new List<Dictionary<string, object>>();
+
+    void Init()
     {
+        _inGameManager = InGameManager.Instance;
+        _inGameManager.IsWaveActive = true;
 
-    }
-    private void OnDisable()
-    {
-    }
+        _listWaveInfo = TableManager.Instance.GetTable("info_enemy_wave");
+        _listEnemyInfo = TableManager.Instance.GetTable("info_enemy");
 
-    List<Dictionary<string, object>> listWaveInfo = new List<Dictionary<string, object>>();
-    List<Dictionary<string, object>> listEnemyInfo = new List<Dictionary<string, object>>();
+        maxSpawnCount = _listWaveInfo[InGameManager.Instance.gameLevel - 1]["SpawnCount"].GetHashCode();
+        maxEnemyCount = _listWaveInfo[InGameManager.Instance.gameLevel - 1]["SpawnMaxCount"].GetHashCode();
+        spawnWaitTime = (float)_listWaveInfo[InGameManager.Instance.gameLevel - 1]["SpawnWaitTime"];
+        nextSpawnTime = (float)_listWaveInfo[InGameManager.Instance.gameLevel - 1]["NextSpawnTime"];
 
-    void init()
-    {
-        inGameManager = InGameManager.Instance;
-        inGameManager.IsWaveActive = true;
-
-        listWaveInfo = TableManager.Instance.GetTable("info_enemy_wave");
-        listEnemyInfo = TableManager.Instance.GetTable("info_enemy");
-
-        maxSpawnCount = listWaveInfo[InGameManager.Instance.gameLevel - 1]["SpawnCount"].GetHashCode();
-        maxEnemyCount = listWaveInfo[InGameManager.Instance.gameLevel - 1]["SpawnMaxCount"].GetHashCode();
-        spawnWaitTime = (float)listWaveInfo[InGameManager.Instance.gameLevel - 1]["SpawnWaitTime"];
-        nextSpawnTime = (float)listWaveInfo[InGameManager.Instance.gameLevel - 1]["NextSpawnTime"];
-
-        enemyPool = ObjectBasePool.CreateInstancePool(transform, enemyPrefab, 100, true, 100);
+        _enemyPool = ObjectBasePool.CreateInstancePool(transform, enemyPrefab, 100, true, 100);
     }
 
     IEnumerator SpawnWaveRootin()
     {
         while (true)
         {
-            if (!inGameManager.IsWaveActive)
+            if (!_inGameManager.IsWaveActive)
                 break;
 
             StartCoroutine(SpawnWave());
@@ -81,7 +73,7 @@ public class EnemyManager : Singleton<EnemyManager>
 
             if (curEnemyCount >= maxEnemyCount)
             {
-                LevelUP();
+                LevelUp();
                 break;
             }
 
@@ -89,24 +81,24 @@ public class EnemyManager : Singleton<EnemyManager>
         }
     }
 
-    void LevelUP()
+    void LevelUp()
     {
         InGameManager.Instance.gameLevel++;
-        if(InGameManager.Instance.gameLevel > listWaveInfo.Count)
+        if(InGameManager.Instance.gameLevel > _listWaveInfo.Count)
         {
             InGameManager.Instance.gameLevel = 0;
         }
-        maxEnemyCount = listWaveInfo[InGameManager.Instance.gameLevel - 1]["SpawnMaxCount"].GetHashCode();
-        maxSpawnCount = listWaveInfo[InGameManager.Instance.gameLevel - 1]["SpawnCount"].GetHashCode();
-        spawnWaitTime = (float)listWaveInfo[InGameManager.Instance.gameLevel - 1]["SpawnWaitTime"];
-        nextSpawnTime = (float)listWaveInfo[InGameManager.Instance.gameLevel - 1]["NextSpawnTime"];
+        maxEnemyCount = _listWaveInfo[InGameManager.Instance.gameLevel - 1]["SpawnMaxCount"].GetHashCode();
+        maxSpawnCount = _listWaveInfo[InGameManager.Instance.gameLevel - 1]["SpawnCount"].GetHashCode();
+        spawnWaitTime = (float)_listWaveInfo[InGameManager.Instance.gameLevel - 1]["SpawnWaitTime"];
+        nextSpawnTime = (float)_listWaveInfo[InGameManager.Instance.gameLevel - 1]["NextSpawnTime"];
         curEnemyCount = 0;
     }
 
     void SpawnEnemy()
     {
-        var enemy = enemyPool.Spawn<Enemy>();
-        enemy.speed = listEnemyInfo[1]["Speed"].GetHashCode();
+        var enemy = _enemyPool.Spawn<Enemy>();
+        enemy.speed = _listEnemyInfo[1]["Speed"].GetHashCode();
         var enemyTransform = enemy.gameObject.transform;
         enemyTransform.position = spawnPoint.position;
         enemyTransform.rotation = spawnPoint.rotation;

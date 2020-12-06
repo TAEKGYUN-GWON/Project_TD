@@ -5,8 +5,8 @@ using UnityEngine;
 public class ObjectBase : MonoBehaviour
 {
     protected bool _isActivated = false;
-    protected ObjectBasePool _instancePool;
-    protected Coroutine _delayDespawn = null;
+    protected ObjectBasePool InstancePool;
+    protected Coroutine DelayDespawn = null;
 
     public virtual bool IsActivated
     {
@@ -37,19 +37,19 @@ public class ObjectBase : MonoBehaviour
 
     public virtual void OnSpawn(ObjectBasePool instancePool)
     {
-        _instancePool = instancePool;
+        InstancePool = instancePool;
         _isActivated = true;
     }
 
     public virtual void Despawn(float delaySecond)
     {
-        if (_delayDespawn != null)
+        if (DelayDespawn != null)
         {
-            StopCoroutine(_delayDespawn);
-            _delayDespawn = null;
+            StopCoroutine(DelayDespawn);
+            DelayDespawn = null;
         }
 
-        _delayDespawn = StartCoroutine(_DelayDespawn(delaySecond));
+        DelayDespawn = StartCoroutine(_DelayDespawn(delaySecond));
     }
 
     protected virtual IEnumerator _DelayDespawn(float delay)
@@ -60,7 +60,7 @@ public class ObjectBase : MonoBehaviour
             yield break;
         }
 
-        _delayDespawn = null;
+        DelayDespawn = null;
         Despawn();
     }
 
@@ -72,15 +72,15 @@ public class ObjectBase : MonoBehaviour
         }
 
 
-        if (_delayDespawn != null)
+        if (DelayDespawn != null)
         {
-            StopCoroutine(_delayDespawn);
-            _delayDespawn = null;
+            StopCoroutine(DelayDespawn);
+            DelayDespawn = null;
         }
 
-        if (_instancePool != null)
+        if (InstancePool != null)
         {
-            _instancePool.Despawn(this);
+            InstancePool.Despawn(this);
         }
         else
         {

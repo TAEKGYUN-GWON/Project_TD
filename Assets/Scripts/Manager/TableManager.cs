@@ -7,38 +7,38 @@ using UnityEngine;
 
 public class TableManager
 {
-    private static TableManager instance = null;
+    private static TableManager _instance = null;
 
     public static TableManager Instance
     {
         get
         {
-            if(null == instance)
+            if(null == _instance)
             {
-                instance = new TableManager();
+                _instance = new TableManager();
 
-                instance.init();
+                _instance.Init();
             }
 
-            return instance;
+            return _instance;
         }
     }
 
-    void init()
+    void Init()
     {
     }
 
-    private Dictionary<string, List<Dictionary<string, object>>> table = new Dictionary<string, List<Dictionary<string, object>>>();
+    private Dictionary<string, List<Dictionary<string, object>>> _table = new Dictionary<string, List<Dictionary<string, object>>>();
 
-    static string SPLIT_RE = @",(?=(?:[^""]*""[^""]*"")*(?![^""]*""))";
-    static string LINE_SPLIT_RE = @"\r\n|\n\r|\n|\r";
-    static char[] TRIM_CHARS = { '\"' };
+    static string _splitRe = @",(?=(?:[^""]*""[^""]*"")*(?![^""]*""))";
+    static string _lineSplitRe = @"\r\n|\n\r|\n|\r";
+    static char[] _trimChars = { '\"' };
 
     public List<Dictionary<string, object>> GetTable(string file)
     {
-        if (table.ContainsKey(file))
+        if (_table.ContainsKey(file))
         {
-            return table[file];
+            return _table[file];
         }
         else
         {
@@ -48,9 +48,9 @@ public class TableManager
 
     public List<Dictionary<string, object>> Read(string file)
     {
-        if(table.ContainsKey(file))
+        if(_table.ContainsKey(file))
         {
-            return table[file];
+            return _table[file];
         }
 
         var list = new List<Dictionary<string, object>>();
@@ -70,7 +70,7 @@ public class TableManager
         StreamReader sr = new StreamReader(Application.dataPath + "/Data/" + file + ".csv");
         source = sr.ReadToEnd();
         sr.Close();
-        var lines = Regex.Split(source, LINE_SPLIT_RE);
+        var lines = Regex.Split(source, _lineSplitRe);
 #else
         TextAsset data = Resources.Load (file) as TextAsset;
         var lines = Regex.Split(data.text, LINE_SPLIT_RE);
@@ -78,18 +78,18 @@ public class TableManager
 
         if (lines.Length <= 1) return list;
 
-        var header = Regex.Split(lines[0], SPLIT_RE);
+        var header = Regex.Split(lines[0], _splitRe);
         for (var i = 1; i < lines.Length; i++)
         {
 
-            var values = Regex.Split(lines[i], SPLIT_RE);
+            var values = Regex.Split(lines[i], _splitRe);
             if (values.Length == 0 || values[0] == "") continue;
 
             var entry = new Dictionary<string, object>();
             for (var j = 0; j < header.Length && j < values.Length; j++)
             {
                 string value = values[j];
-                value = value.TrimStart(TRIM_CHARS).TrimEnd(TRIM_CHARS).Replace("\\", "");
+                value = value.TrimStart(_trimChars).TrimEnd(_trimChars).Replace("\\", "");
                 object finalvalue = value;
                 int n;
                 float f;
@@ -106,7 +106,7 @@ public class TableManager
             list.Add(entry);
         }
 
-        table.Add(file, list);
+        _table.Add(file, list);
         return list;
     }
 }

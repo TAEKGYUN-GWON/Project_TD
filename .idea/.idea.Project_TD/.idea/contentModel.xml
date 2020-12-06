@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\dkssu\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\dkssu\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_Project_TD.-1652894268.00" t="ExcludeRecursive" />
+    <e p="D:\develop\Game\Unity\Project_TD" t="IncludeRecursive">
+      <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
+      <e p="Assets" t="Include">
+        <e p="LINQtoGameObject" t="Include">
+          <e p="Examples" t="Include">
+            <e p="SampleSceneScript.cs" t="Include" />
+          </e>
+          <e p="README.txt" t="Include" />
+          <e p="Scripts" t="Include">
+            <e p="GameObjectExtensions.Enumerable.cs" t="Include" />
+            <e p="GameObjectExtensions.Operate.cs" t="Include" />
+            <e p="GameObjectExtensions.Traverse.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Scripts" t="Include">
+          <e p="InGame" t="Include">
+            <e p="Enemy.cs" t="Include" />
+            <e p="Turret.cs" t="Include" />
+            <e p="WayPonts.cs" t="Include" />
+          </e>
+          <e p="Manager" t="Include">
+            <e p="CoroutineManager.cs" t="Include" />
+            <e p="EnemyManager.cs" t="Include" />
+            <e p="InGameManager.cs" t="Include" />
+            <e p="TableManager.cs" t="Include" />
+          </e>
+          <e p="ObjectBase" t="Include">
+            <e p="ObjectBase.cs" t="Include" />
+            <e p="ObjectBasePool.cs" t="Include" />
+          </e>
+          <e p="Utils" t="Include">
+            <e p="BitConvert.cs" t="Include" />
+            <e p="EnumDictionary.cs" t="Include" />
+            <e p="EnumHashSet.cs" t="Include" />
+            <e p="ObjectPool.cs" t="Include" />
+            <e p="Singleton.cs" t="Include" />
+            <e p="ValueCastTo.cs" t="Include" />
+            <e p="YieldInstructionCache.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="obj" t="ExcludeRecursive" />
+      <e p="Packages" t="ExcludeRecursive" />
+      <e p="Project_TD.sln" t="IncludeFlat" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>

@@ -10,9 +10,9 @@ public class InGameManager : Singleton<InGameManager>
 
     public int gameLevel = 1;
 
-    public float WaveTimer { get => waveCountdownTimer; }
+    public float WaveTimer { get => _waveCountdownTimer; }
 
-    private float waveCountdownTimer = 0;
+    private float _waveCountdownTimer = 0;
 
     public bool IsWaveActive { get => isWaveActive; set => isWaveActive = value; }
 
@@ -23,36 +23,36 @@ public class InGameManager : Singleton<InGameManager>
     private bool isWaveActive = false;
     void Awake()
     {
-        Instance.init();
+        Instance.Init();
     }
 
-    private void init()
+    private void Init()
     {
-        var TableMgr = TableManager.Instance;
+        var tableMgr = TableManager.Instance;
 
-        TableMgr.Read("info_character_base");
-        TableMgr.Read("info_character_enhance");
-        TableMgr.Read("info_character_levelup");
-        TableMgr.Read("info_enemy");
-        TableMgr.Read("info_enemy_wave");
+        tableMgr.Read("info_character_base");
+        tableMgr.Read("info_character_enhance");
+        tableMgr.Read("info_character_levelup");
+        tableMgr.Read("info_enemy");
+        tableMgr.Read("info_enemy_wave");
 
-        waveCountdownTimer = 20f;
+        _waveCountdownTimer = 300f;
 
-        StartCoroutine(gameTimerCountDown());
+        StartCoroutine(GameTimerCountDown());
     }
 
-    IEnumerator gameTimerCountDown()
+    IEnumerator GameTimerCountDown()
     {
         while(true)
         {
             if (isWaveActive)
             {
-                waveCountdownTimer--;
-                waveCountdownText.text = Math.Round(waveCountdownTimer).ToString();
+                _waveCountdownTimer--;
+                waveCountdownText.text = Math.Round(_waveCountdownTimer).ToString();
 
-                if (waveCountdownTimer <= 0f)
+                if (_waveCountdownTimer <= 0f)
                 {
-                    waveCountdownTimer = 0f;
+                    _waveCountdownTimer = 0f;
                     isWaveActive = false;
                     waveCountdownText.text = "Time Over";
                 }

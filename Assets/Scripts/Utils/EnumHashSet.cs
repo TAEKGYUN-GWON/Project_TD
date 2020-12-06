@@ -276,9 +276,9 @@ namespace OverStory
         {
             HashSet<int>.Enumerator enumerator;
 
-            internal Enumerator(HashSet<int>.Enumerator enumerator_)
+            internal Enumerator(HashSet<int>.Enumerator enumerator)
             {
-                enumerator = enumerator_;
+                this.enumerator = enumerator;
             }
 
             //================================================================================================================================
