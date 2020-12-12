@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Bullet : ObjectBase
 {
@@ -9,19 +7,20 @@ public class Bullet : ObjectBase
 
     public float _speed = 70f;
     public GameObject impactEffectPrefab;
-    private ParticleSystem impact;
-    public void Seek(Transform target)
-    {
-        _target = target;
-    }
+
+    //무엇이 더 효율적인가..
+    /*private ParticleSystem _impact;
 
     protected override void Awake()
     {
         base.Awake();
-        
-        impact = Instantiate(impactEffectPrefab, transform.position, transform.rotation).GetComponent<ParticleSystem>();
-        
-        impact.Stop();
+        _impact =  Instantiate(impactEffectPrefab, transform.position, transform.rotation).GetComponent<ParticleSystem>();
+        _impact.Stop();
+    }*/
+
+    public void Seek(Transform target)
+    {
+        _target = target;
     }
 
     // Update is called once per frame
@@ -50,11 +49,16 @@ public class Bullet : ObjectBase
     {
         var enemy = _target.GetComponent<Enemy>();
         enemy.Despawn();
-        var impactTransform = impact.transform;
-        impactTransform.position = transform.position;
-        impactTransform.rotation = transform.rotation;
+
+        /*var impactTrans = _impact.transform;
+        impactTrans.position = transform.position;
+        impactTrans.rotation = transform.rotation;
+        _impact.Play();*/
+
+        var impact = Instantiate(impactEffectPrefab, transform.position, transform.rotation);
         
-        impact.Play();
+        Destroy(impact, 2f);
+        
         Despawn();
     }
     

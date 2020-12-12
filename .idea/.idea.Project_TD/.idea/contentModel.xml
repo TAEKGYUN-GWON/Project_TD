@@ -19,19 +19,25 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="InGame" t="Include">
-            <e p="Enemy.cs" t="Include" />
+            <e p="Enemy" t="Include">
+              <e p="Enemy.cs" t="Include" />
+              <e p="EnemyManager.cs" t="Include" />
+            </e>
+            <e p="InGameManager.cs" t="Include" />
+            <e p="Node" t="Include">
+              <e p="Node.cs" t="Include" />
+              <e p="WayPonts.cs" t="Include" />
+            </e>
             <e p="Turrets" t="Include">
+              <e p="BuildManager.cs" t="Include" />
               <e p="Bullets" t="Include">
                 <e p="Bullet.cs" t="Include" />
               </e>
               <e p="Turret.cs" t="Include" />
             </e>
-            <e p="WayPonts.cs" t="Include" />
           </e>
           <e p="Manager" t="Include">
             <e p="CoroutineManager.cs" t="Include" />
-            <e p="EnemyManager.cs" t="Include" />
-            <e p="InGameManager.cs" t="Include" />
             <e p="TableManager.cs" t="Include" />
           </e>
           <e p="ObjectBase" t="Include">

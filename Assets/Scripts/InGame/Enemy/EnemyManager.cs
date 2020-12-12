@@ -86,7 +86,7 @@ public class EnemyManager : Singleton<EnemyManager>
         InGameManager.Instance.gameLevel++;
         if(InGameManager.Instance.gameLevel > _listWaveInfo.Count)
         {
-            InGameManager.Instance.gameLevel = 0;
+            InGameManager.Instance.gameLevel = 1;
         }
         maxEnemyCount = _listWaveInfo[InGameManager.Instance.gameLevel - 1]["SpawnMaxCount"].GetHashCode();
         maxSpawnCount = _listWaveInfo[InGameManager.Instance.gameLevel - 1]["SpawnCount"].GetHashCode();

@@ -1,10 +1,4 @@
-﻿using System;
-using System.Linq;
-using Unity.Linq;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.SceneManagement;
+﻿using UnityEngine;
 
 public class Turret : MonoBehaviour
 {
