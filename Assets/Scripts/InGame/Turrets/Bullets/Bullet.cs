@@ -28,7 +28,7 @@ public class Bullet : ObjectBase
     {
         if (_target == null)
         {
-            Destroy(gameObject);
+            Despawn();
             return;
         }
 
