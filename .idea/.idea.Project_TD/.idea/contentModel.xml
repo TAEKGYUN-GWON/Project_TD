@@ -20,7 +20,12 @@
         <e p="Scripts" t="Include">
           <e p="InGame" t="Include">
             <e p="Enemy.cs" t="Include" />
-            <e p="Turret.cs" t="Include" />
+            <e p="Turrets" t="Include">
+              <e p="Bullets" t="Include">
+                <e p="Bullet.cs" t="Include" />
+              </e>
+              <e p="Turret.cs" t="Include" />
+            </e>
             <e p="WayPonts.cs" t="Include" />
           </e>
           <e p="Manager" t="Include">

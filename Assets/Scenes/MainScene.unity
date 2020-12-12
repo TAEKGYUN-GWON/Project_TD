@@ -630,6 +630,7 @@ GameObject:
   - component: {fileID: 69552099}
   - component: {fileID: 69552098}
   - component: {fileID: 69552097}
+  - component: {fileID: 69552096}
   m_Layer: 0
   m_Name: Ground (10)
   m_TagString: Untagged
@@ -637,6 +638,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &69552096
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 69552095}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0000002, y: 1, z: 1.0000002}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &69552097
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -711,6 +725,7 @@ GameObject:
   - component: {fileID: 85254830}
   - component: {fileID: 85254829}
   - component: {fileID: 85254828}
+  - component: {fileID: 85254827}
   m_Layer: 0
   m_Name: Ground (11)
   m_TagString: Untagged
@@ -718,6 +733,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &85254827
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 85254826}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.99999994, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &85254828
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2874,6 +2902,7 @@ GameObject:
   - component: {fileID: 340207804}
   - component: {fileID: 340207803}
   - component: {fileID: 340207802}
+  - component: {fileID: 340207801}
   m_Layer: 0
   m_Name: Ground (7)
   m_TagString: Untagged
@@ -2881,6 +2910,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &340207801
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 340207800}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.99999994, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &340207802
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3422,6 +3464,7 @@ GameObject:
   - component: {fileID: 391609456}
   - component: {fileID: 391609455}
   - component: {fileID: 391609454}
+  - component: {fileID: 391609453}
   m_Layer: 0
   m_Name: Ground (6)
   m_TagString: Untagged
@@ -3429,6 +3472,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &391609453
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 391609452}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0000001, y: 1, z: 1.0000002}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &391609454
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4640,6 +4696,7 @@ GameObject:
   - component: {fileID: 555387438}
   - component: {fileID: 555387437}
   - component: {fileID: 555387436}
+  - component: {fileID: 555387435}
   m_Layer: 0
   m_Name: Ground (14)
   m_TagString: Untagged
@@ -4647,6 +4704,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &555387435
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 555387434}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0000001, y: 1, z: 1.0000002}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &555387436
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5279,6 +5349,7 @@ GameObject:
   - component: {fileID: 656001099}
   - component: {fileID: 656001098}
   - component: {fileID: 656001097}
+  - component: {fileID: 656001096}
   m_Layer: 0
   m_Name: Ground (9)
   m_TagString: Untagged
@@ -5286,6 +5357,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &656001096
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 656001095}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.99999994, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &656001097
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5422,6 +5506,7 @@ GameObject:
   - component: {fileID: 666320855}
   - component: {fileID: 666320854}
   - component: {fileID: 666320853}
+  - component: {fileID: 666320852}
   m_Layer: 0
   m_Name: Ground (16)
   m_TagString: Untagged
@@ -5429,6 +5514,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &666320852
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 666320851}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0000001, y: 1, z: 1.0000002}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &666320853
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5813,6 +5911,7 @@ GameObject:
   - component: {fileID: 726026142}
   - component: {fileID: 726026141}
   - component: {fileID: 726026140}
+  - component: {fileID: 726026139}
   m_Layer: 0
   m_Name: Ground (8)
   m_TagString: Untagged
@@ -5820,6 +5919,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &726026139
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 726026138}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0000002, y: 1, z: 1.0000002}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &726026140
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6394,6 +6506,7 @@ GameObject:
   - component: {fileID: 777919984}
   - component: {fileID: 777919983}
   - component: {fileID: 777919982}
+  - component: {fileID: 777919981}
   m_Layer: 0
   m_Name: Ground (1)
   m_TagString: Untagged
@@ -6401,6 +6514,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &777919981
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 777919980}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0000002, y: 1, z: 1.0000002}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &777919982
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8750,6 +8876,7 @@ GameObject:
   - component: {fileID: 1062464335}
   - component: {fileID: 1062464334}
   - component: {fileID: 1062464333}
+  - component: {fileID: 1062464332}
   m_Layer: 0
   m_Name: Ground (3)
   m_TagString: Untagged
@@ -8757,6 +8884,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1062464332
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1062464331}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.99999994, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1062464333
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10617,6 +10757,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6602016661991988187, guid: f2be9ac5a4f761842aee090da0d28e14, type: 3}
+      propertyPath: bulletPrefab
+      value: 
+      objectReference: {fileID: -463189406837989474, guid: 1bebb19e844ffaa41af9cc025a593b55, type: 3}
     - target: {fileID: 8215292582446261078, guid: f2be9ac5a4f761842aee090da0d28e14, type: 3}
       propertyPath: m_Name
       value: Turret
@@ -10802,6 +10946,7 @@ GameObject:
   - component: {fileID: 1426067823}
   - component: {fileID: 1426067822}
   - component: {fileID: 1426067821}
+  - component: {fileID: 1426067820}
   m_Layer: 0
   m_Name: Ground (12)
   m_TagString: Untagged
@@ -10809,6 +10954,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1426067820
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1426067819}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.99999994, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1426067821
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10945,6 +11103,7 @@ GameObject:
   - component: {fileID: 1444969393}
   - component: {fileID: 1444969392}
   - component: {fileID: 1444969391}
+  - component: {fileID: 1444969390}
   m_Layer: 0
   m_Name: Ground (2)
   m_TagString: Untagged
@@ -10952,6 +11111,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1444969390
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1444969389}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.99999994, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1444969391
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11274,6 +11446,7 @@ GameObject:
   - component: {fileID: 1490662600}
   - component: {fileID: 1490662599}
   - component: {fileID: 1490662598}
+  - component: {fileID: 1490662597}
   m_Layer: 0
   m_Name: Ground (18)
   m_TagString: Untagged
@@ -11281,6 +11454,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1490662597
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1490662596}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0000001, y: 1, z: 1.0000002}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1490662598
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11851,6 +12037,7 @@ GameObject:
   - component: {fileID: 1579228618}
   - component: {fileID: 1579228617}
   - component: {fileID: 1579228616}
+  - component: {fileID: 1579228615}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
@@ -11858,6 +12045,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1579228615
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579228614}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1579228616
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12540,6 +12740,7 @@ GameObject:
   - component: {fileID: 1666852362}
   - component: {fileID: 1666852361}
   - component: {fileID: 1666852360}
+  - component: {fileID: 1666852359}
   m_Layer: 0
   m_Name: Ground (15)
   m_TagString: Untagged
@@ -12547,6 +12748,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1666852359
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1666852358}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0000001, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1666852360
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13613,6 +13827,7 @@ GameObject:
   - component: {fileID: 1807292453}
   - component: {fileID: 1807292452}
   - component: {fileID: 1807292451}
+  - component: {fileID: 1807292450}
   m_Layer: 0
   m_Name: Ground (5)
   m_TagString: Untagged
@@ -13620,6 +13835,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1807292450
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1807292449}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.99999994, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1807292451
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13942,6 +14170,7 @@ GameObject:
   - component: {fileID: 1840954401}
   - component: {fileID: 1840954400}
   - component: {fileID: 1840954399}
+  - component: {fileID: 1840954398}
   m_Layer: 0
   m_Name: Ground (4)
   m_TagString: Untagged
@@ -13949,6 +14178,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1840954398
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840954397}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0000001, y: 1, z: 1.0000002}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1840954399
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14643,6 +14885,7 @@ GameObject:
   - component: {fileID: 1949991403}
   - component: {fileID: 1949991402}
   - component: {fileID: 1949991401}
+  - component: {fileID: 1949991400}
   m_Layer: 0
   m_Name: Ground (13)
   m_TagString: Untagged
@@ -14650,6 +14893,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1949991400
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1949991399}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0000004, y: 1, z: 1.0000002}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1949991401
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14899,63 +15155,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4041116305996129620, guid: 628ba7983c777a048a4126705776844d, type: 3}
   m_PrefabInstance: {fileID: 1985184094}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &2004802104
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 8215292582446261078, guid: f2be9ac5a4f761842aee090da0d28e14, type: 3}
-      propertyPath: m_Name
-      value: Turret (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8739593240076630508, guid: f2be9ac5a4f761842aee090da0d28e14, type: 3}
-      propertyPath: m_RootOrder
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 8739593240076630508, guid: f2be9ac5a4f761842aee090da0d28e14, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8739593240076630508, guid: f2be9ac5a4f761842aee090da0d28e14, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8739593240076630508, guid: f2be9ac5a4f761842aee090da0d28e14, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 35
-      objectReference: {fileID: 0}
-    - target: {fileID: 8739593240076630508, guid: f2be9ac5a4f761842aee090da0d28e14, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8739593240076630508, guid: f2be9ac5a4f761842aee090da0d28e14, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8739593240076630508, guid: f2be9ac5a4f761842aee090da0d28e14, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8739593240076630508, guid: f2be9ac5a4f761842aee090da0d28e14, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8739593240076630508, guid: f2be9ac5a4f761842aee090da0d28e14, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8739593240076630508, guid: f2be9ac5a4f761842aee090da0d28e14, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: 8739593240076630508, guid: f2be9ac5a4f761842aee090da0d28e14, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f2be9ac5a4f761842aee090da0d28e14, type: 3}
 --- !u!1001 &2019769684
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15757,6 +15956,7 @@ GameObject:
   - component: {fileID: 2096120322}
   - component: {fileID: 2096120321}
   - component: {fileID: 2096120320}
+  - component: {fileID: 2096120319}
   m_Layer: 0
   m_Name: Ground (17)
   m_TagString: Untagged
@@ -15764,6 +15964,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &2096120319
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2096120318}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2096120320
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15827,63 +16040,6 @@ Transform:
   m_Father: {fileID: 1645270315}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &2129638673
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 8215292582446261078, guid: f2be9ac5a4f761842aee090da0d28e14, type: 3}
-      propertyPath: m_Name
-      value: Turret (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 8739593240076630508, guid: f2be9ac5a4f761842aee090da0d28e14, type: 3}
-      propertyPath: m_RootOrder
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 8739593240076630508, guid: f2be9ac5a4f761842aee090da0d28e14, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -30
-      objectReference: {fileID: 0}
-    - target: {fileID: 8739593240076630508, guid: f2be9ac5a4f761842aee090da0d28e14, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8739593240076630508, guid: f2be9ac5a4f761842aee090da0d28e14, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 8739593240076630508, guid: f2be9ac5a4f761842aee090da0d28e14, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8739593240076630508, guid: f2be9ac5a4f761842aee090da0d28e14, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8739593240076630508, guid: f2be9ac5a4f761842aee090da0d28e14, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8739593240076630508, guid: f2be9ac5a4f761842aee090da0d28e14, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8739593240076630508, guid: f2be9ac5a4f761842aee090da0d28e14, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8739593240076630508, guid: f2be9ac5a4f761842aee090da0d28e14, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: 8739593240076630508, guid: f2be9ac5a4f761842aee090da0d28e14, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f2be9ac5a4f761842aee090da0d28e14, type: 3}
 --- !u!1001 &2136814714
 PrefabInstance:
   m_ObjectHideFlags: 0

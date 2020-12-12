@@ -11,8 +11,13 @@ public class Turret : MonoBehaviour
     [SerializeField]
     private Transform _target;
 
+    
+    [Header("Attributes")]
     public float _range = 15f;
+    public float _fireRate = 1f;
+    private float fireCountdown = 0f;
 
+    [Header("Unity Setup Fields")]
     public string enemyTag = "Enemy";
     
     [SerializeField]
@@ -20,11 +25,23 @@ public class Turret : MonoBehaviour
 
     public float turnSpeed = 10f;
     
-    // Start is called before the first frame update
-    void Start()
+    ObjectBasePool _bulletPool;
+
+    public Bullet bulletPrefab;
+    public Transform firePoint;
+
+    private void Awake()
+    {
+        init();
+    }
+
+    void init()
     {
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
+        
+        _bulletPool = ObjectBasePool.CreateInstancePool(transform, bulletPrefab, 50, true, 50);
     }
+
     void UpdateTarget()
     {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag(enemyTag);
@@ -39,7 +56,6 @@ public class Turret : MonoBehaviour
             {
                 shortestDistance = distance;
                 nearestEnemy = enemies[i];
-                break;
             }
         }
 
@@ -61,6 +77,15 @@ public class Turret : MonoBehaviour
             return;
 
         TargetLookOn();
+
+        if (fireCountdown <= 0f)
+        {
+            Shoot();
+            fireCountdown = 1f / _fireRate;
+        }
+
+        fireCountdown -= Time.deltaTime;
+
     }
 
     private void TargetLookOn()
@@ -70,7 +95,21 @@ public class Turret : MonoBehaviour
         var rotation = Quaternion.Lerp(_partToRotate.rotation, lookRotation, Time.deltaTime * turnSpeed).eulerAngles;
         _partToRotate.rotation = Quaternion.Euler(0f, rotation.y, 0f);
     }
-    
+
+    void Shoot()
+    {
+        var bullet = _bulletPool.Spawn<Bullet>();
+        var bulletTransform = bullet.gameObject.transform;
+        bulletTransform.position = firePoint.position;
+        bulletTransform.rotation = firePoint.rotation;
+        bullet.gameObject.transform.SetParent(transform);
+
+        if (bullet != null)
+        {
+            bullet.Seek(_target);
+        }
+
+    }
 
     private void OnDrawGizmosSelected()
     {
